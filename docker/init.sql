@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS bank_lab CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS book_lab CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE USER IF NOT EXISTS 'pageslip'@'%' IDENTIFIED BY 'pageslip-local';
+GRANT ALL PRIVILEGES ON bank_lab.* TO 'pageslip'@'%';
+GRANT ALL PRIVILEGES ON book_lab.* TO 'pageslip'@'%';

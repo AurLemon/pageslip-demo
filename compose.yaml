@@ -1,0 +1,18 @@
+name: pageslip-demo
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: pageslip-root-local
+    ports:
+      - "127.0.0.1:33484:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/01-pageslip.sql:ro
+    healthcheck:
+      test: ["CMD", "mysql", "--protocol=TCP", "-h", "127.0.0.1", "-u", "pageslip", "-ppageslip-local", "-e", "SELECT 1"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+volumes:
+  mysql-data:
