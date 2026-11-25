@@ -9,6 +9,11 @@
 
 账户与图书使用合成数据。转账、并发时序、执行计划和时间均由本地 MySQL 实际运行得出。两份独立课堂汇报在 PPT 中呈现实验过程、数据和 SQL。
 
+## 答辩 PPT
+
+- [任务五：二手书查询性能优化](presentations/task-5-query-optimization.pptx)（结课项目）
+- [任务四：转账的事务与并发控制](presentations/task-4-transactions.pptx)（实验项目）
+
 ## 复现实验
 
 需要 Docker Compose、Python 3.10+ 和可用的本机端口 33484。下列命令会初始化专用 MySQL 实例，实验脚本会重设测试账户并重建书目表。
